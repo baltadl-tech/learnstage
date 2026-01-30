@@ -1,0 +1,104 @@
+* {
+  font-size: 24px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+}
+
+header {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#main-doc > section > header {
+  text-indent: 3rem;
+}
+
+section:first_child {
+  margin-top: 3rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+p {
+  text-indent: 1rem;
+}
+
+.nav-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+#navbar {
+  top: 1px;
+  left: 1px;
+  display: inline-block;
+  flex-direction: column;
+  width: 30%;
+  height: 100vh;
+  background-color: #ddd;
+  padding: 0;
+  box-shadow: 2px 0 5px #000;
+  overflow-y: scroll;
+}
+
+#navbar > header {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  background-color: #ddd;
+  padding: 0.5rem;
+}
+
+#main-doc {
+  display: inline-block;
+  width:64%;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  border-collapse: separate;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+#return_to_navbar {
+  display: none;
+}
+
+@media screen and (max-width:768px)
+{
+  body{
+    display: block;
+  }
+  #navbar{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+  }
+  
+  #main-doc{
+    width: 100%;
+  }
+
+
+  #return_to_navbar {
+  display: inline-block;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  }
+  
+  #return::before {
+  content: "🠉";
+  }
+}
+
+** end of styles.css **
